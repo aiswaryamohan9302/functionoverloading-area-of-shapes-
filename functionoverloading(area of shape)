@@ -1,0 +1,66 @@
+#include<iostream>
+using namespace std;
+
+class shape
+{
+     private:int l,b;
+             float bt,ht,r;
+     public:
+             int area(int,int);
+             float area(float,float);
+             float area(float);
+             
+};
+
+int shape::area(int l,int b)
+{
+    cout<<"enter the length and breadth of the rectangle";
+    cin>>l>>b;
+    return(l*b);
+}
+float shape::area(float bt,float ht)
+{
+    cout<<"enter the breadth and height of the triangle";
+    cin>>bt>>ht;
+    return(0.5*bt*ht);
+}
+float shape::area(float r)
+{
+    cout<<"enter the radius of the circle";
+    cin>>r;
+    return(3.14*r*r);
+}
+
+int main()
+{
+    int ch,l,b;
+    float bt,ht,r;
+    shape s;
+    start:
+    cout<<"\n find the area of selected shape";
+    cout<<"\n1.rectangle\n2.triangle\n3.circle\n4.exit";
+    cin>>ch;
+    switch(ch)
+    {
+        case 1:
+        cout<<s.area(l,b);
+        goto start;
+        break; 
+        
+        case 2:
+        cout<<s.area(bt,ht);
+        goto start;
+        break;
+        
+        case 3:
+        cout<<s.area(r);
+        goto start;
+        break;
+        
+        case 4:
+        exit;
+        
+    }
+    return 0;
+}
+
